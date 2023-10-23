@@ -1,5 +1,4 @@
 #!/usr/bin python3
-#Creator Him/SLBG128
 from base64 import b64encode,b64decode
 
 def encoding(plainText):
@@ -110,29 +109,11 @@ def decrypt(text):
     return plainText
 
 def main():
-    print("Welcome to the p64 encrypt and decrypt script by Him/SLBG128")
-    print("What YOU want to do?")
-    print("[1]Encrypt Something \n[2]Decrypt Something \n[3]Exit")
-    user = input()
-    while user != "3":
-        if user == "1":
-            plainText = input("Please type the string you want to encrypt: \n")
-            encText = encrypt(plainText)
-            print("Encryption done. Result: \n",encText)
-            print("What YOU want to do?")
-            print("[1]Encrypt Something \n[2]Decrypt Something \n[3]Exit")
-            user = input()
-        elif user == "2":
-            encText = input("Please type the string you want to decrypt: \n")
-            plainText = decrypt(encText)
-            print("Encryption done. Result: \n",encText)
-            print("What YOU want to do?")
-            print("[1]Encrypt Something \n[2]Decrypt Something \n[3]Exit")
-            user = input()
-        else:
-            print("Invalid, please type again")
-            user = input()
-    exit()
+    plainText = "This is a test string, btw I love her"
+    encrypted = encrypt(plainText)
+    print(encrypted)
+    decrypted = decrypt(encrypted)
+    print(decrypted)
 
 if __name__ == "__main__":
     main()
